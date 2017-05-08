@@ -1,0 +1,7 @@
+* Django Docker Seed
+Example project for django project dockerization.
+** Requirements
+- postgres v9.6
+- pip
+- django 1.11
+- python 3
