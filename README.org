@@ -1,7 +1,41 @@
 * Django Docker Seed
-Example project for django project dockerization.
+Example project for django project dockerization. The simple django project ~plenti~ does not contain any APIs.
 ** Requirements
 - postgres v9.6
 - pip
 - django 1.11
 - python 3
+** How to Run
+
+First you should have an Ubuntu with Docker installed. You can do it by using Docker Ubuntu image in cloud services or simply:
+
+#+BEGIN_SRC shell
+sudo apt-get install docker
+#+END_SRC
+
+To run the docker image, just tun the following commands:
+
+#+BEGIN_SRC shell
+docker-compose build
+docker-compose up
+#+END_SRC
+What these two lines of command does it to compile a docker image by running everything from Dockerfile, and then run the server in the docker compose file.
+
+Notice that you need to then check the local machine IP address in order to access the django project from web browsers. 
+
+For Mac OSX I would suggest you use ~boot2docker~ for a virtual environment of docker images:
+
+#+BEGIN_SRC shell
+brew install boot2docker
+boot2docker up 
+boot2docker init
+#+END_SRC
+
+Then you need to run the following command(with dollar sign and parenthesis) for each terminal that you wish to use as a docker terminal:
+
+#+BEGIN_SRC shell
+$(boot2docker shellinit)
+#+END_SRC
+
+You are good to go!
+
